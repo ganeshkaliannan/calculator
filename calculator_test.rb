@@ -36,5 +36,11 @@ class CalculatorTest < Test::Unit::TestCase
     # Check the result if it is equal to 3
     assert_equal 3, result
   end
+  
+  def test_add_avoid_negative_numbers
+    result = @calculator.add("-2,1,-5")
+    # Check result should return an error message with negative numbers.
+    assert_equal "Input data contains the following negative numbers ---- -2,-5 ----, please try again.", result
+  end
 
 end
