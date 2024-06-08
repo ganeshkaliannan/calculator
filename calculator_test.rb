@@ -19,4 +19,10 @@ class CalculatorTest < Test::Unit::TestCase
     assert_equal 1, result
   end
 
+  def test_add_multi_digit_string
+    result = @calculator.add("1,5")
+    # Check result if it is equal to 0
+    assert_equal 6, result
+  end
+
 end
