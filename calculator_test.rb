@@ -43,4 +43,10 @@ class CalculatorTest < Test::Unit::TestCase
     assert_equal "Input data contains the following negative numbers ---- -2,-5 ----, please try again.", result
   end
 
+  def test_add_n_digit_strings
+    result = @calculator.add((1..100).to_a.join(","))
+    # Check the result if it is equal to 5050
+    assert_equal 5050, result
+  end
+
 end
