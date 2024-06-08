@@ -1,2 +1,2 @@
 # calculator
-calculate numeric from string
+Steps to run:  ruby calculator_test.rb
