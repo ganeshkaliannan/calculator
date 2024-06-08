@@ -1,5 +1,6 @@
 class Calculator
-
+  
+  #parsing string and rejecting special characters to find the sum of the collection. 
   def add(str)
     format_string = str.scan(/-?\d+/).map(&:to_i)
     negative_collection = format_string.count(&:negative?)
