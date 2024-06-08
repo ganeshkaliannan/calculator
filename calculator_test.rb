@@ -15,13 +15,19 @@ class CalculatorTest < Test::Unit::TestCase
 
   def test_add_single_digit_string
     result = @calculator.add("1")
-    # Check result if it is equal to 0
+    # Check the result if it is equal to 1
     assert_equal 1, result
   end
 
   def test_add_multi_digit_string
     result = @calculator.add("1,5")
-    # Check result if it is equal to 0
+    # Check the result if it is equal to 6
+    assert_equal 6, result
+  end
+
+  def test_add_string_with_delimeters
+    result = @calculator.add("1\n2,3")
+    # Check result if it is equal to 6
     assert_equal 6, result
   end
 
