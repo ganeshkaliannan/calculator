@@ -25,10 +25,16 @@ class CalculatorTest < Test::Unit::TestCase
     assert_equal 6, result
   end
 
-  def test_add_string_with_delimeters
+  def test_add_string_with_newlines
     result = @calculator.add("1\n2,3")
-    # Check result if it is equal to 6
+    # Check the result if it is equal to 6
     assert_equal 6, result
+  end
+
+  def test_add_string_with_delimeters
+    result = @calculator.add("//;\n1;2")
+    # Check the result if it is equal to 3
+    assert_equal 3, result
   end
 
 end
